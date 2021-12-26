@@ -8,7 +8,7 @@ CC			= gcc
 
 CFLAGS		= -Wall -Wextra -Werror
 
-INCLUDES	= -I../includes
+INCLUDES	= -I../../includes
 
 RM			= rm -f
 

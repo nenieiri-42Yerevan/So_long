@@ -14,14 +14,16 @@ CFLAGS		= -Werror -Wextra -Wall
 
 IS_BONUS	= 0
 
-LIBFT		= ./libft
+LIB			= ./libs
 
-LIBGNL		= ./get_next_line
+LIBFT		= $(LIB)/libft
 
-LIBMLX_L	= ./mlx_linux
+LIBGNL		= $(LIB)/get_next_line
+
+LIBMLX_L	= $(LIB)/mlx_linux
 LIBMLX_L_	= -L$(LIBMLX_L) -lmlx_Linux -lXext -lX11 -lm -lz
 
-LIBMLX_M	= ./mlx
+LIBMLX_M	= $(LIB)/mlx
 LIBMLX_M_	= -L$(LIBMLX_M) -lmlx -framework OpenGL -framework AppKit
 MACH_EXTRA	= install_name_tool -change @loader_path/libbass.dylib @loader_path/bass/libbass.dylib $(NAME) \
 				&& install_name_tool -change libmlx.dylib @loader_path/${MLX}/libmlx.dylib $(NAME)
